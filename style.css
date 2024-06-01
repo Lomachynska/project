@@ -1,0 +1,293 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f4f4f4; /* Додано світлий фон */
+}
+
+.active {
+  color: #007bff; /* або інший колір для позначення активного пункту меню */
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.contact-link i {
+  margin-left: 5px;
+}
+
+.phone-number {
+  margin-left: 10px;
+}
+
+
+.container {
+  max-width: 1280px; /* Змініть значення за необхідності */
+  margin: 0 auto; /* Центрує контейнер по горизонталі */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ... Інші стилі */
+
+
+.ticket-image {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Це додає відступи з обох боків для центрування */
+}
+
+.map-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Головний елемент */
+
+header {
+  background-color: #000;
+  color: #fff;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 15px;
+}
+
+/* Основна область */
+
+main {
+  margin: 80px 0; /* Додано простір для фіксованого заголовка */
+  width: 80%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Додано невеликий тіньовий ефект */
+}
+
+/* Розділ про нас */
+
+.about img {
+  width: 100%;
+  border-radius: 8px; /* Додано border-radius для закругленого зображення */
+}
+
+.about-title {
+  font-size: 42px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.about-content {
+  position: relative;
+}
+
+.about-content p {
+  font-size: 20px;
+  text-align: justify;
+  font-weight: bold;
+}
+
+
+/* АФІША
+
+/* Для заголовка h1 */
+h1 {
+  text-align: center;
+}
+
+/* Для блоку filters */
+.filters {
+  text-align: center;
+  margin-left: 500px !important;
+}
+
+.tickets li {
+  display: none;
+}
+
+.filters a:hover~.tickets .economy {
+  display: block;
+}
+
+.filters a:hover~.tickets .standard {
+  display: block;
+}
+
+.filters a:hover~.tickets .business {
+  display: block;
+}
+
+/* ВІДГУКИ КЛІЄНТІВ */
+
+.review-list {
+  display: flex;
+  justify-content: center;
+}
+
+/* Розділ з розкладом */
+
+.schedule .filters {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.schedule .filters a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 20px; /* Додано відступ між фільтрами */
+}
+
+.schedule ul.tickets li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0; /* Додано межу між квитками */
+  padding-bottom: 10px; /* Додано відступ між квитками */
+}
+
+.schedule ul.tickets li a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none; /* Вилучено підкреслення з посилань */
+  color: #333; /* Змінено колір посилань */
+}
+
+.schedule ul.tickets li a img {
+  max-width: 100%; /* Забезпечити, що зображення не виходять за межі контейнера */
+  border-radius: 8px; /* Додано border-radius для закругленого зображення */
+  margin-bottom: 10px; /* Додано відступ між зображенням та текстом */
+}
+
+.schedule ul.tickets li a div {
+  flex-grow: 1; /* Дозволяє контенту розширюватися у гнучкому контейнері */
+  margin-left: 15px; /* Додано відступ між зображенням та текстом */
+}
+
+.schedule ul.tickets li a h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px; /* Додано відступ нижче заголовку */
+}
+
+.schedule ul.tickets li a p {
+  font-size: 16px;
+  margin: 0; /* Вилучено типовий відступ для абзаців */
+}
+
+.schedule ul.tickets li a p.price {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Розділ для оформлення покупки */
+
+.buy {
+  display: flex;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.buy .map {
+  flex: 1; /* Займає 50% ширини */
+}
+
+.buy .info {
+  flex: 1; /* Займає 50% ширини */
+  padding-left: 20px; /* Додано відступ між картою та інформацією */
+}
+
+.buy .info h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Додано відступ нижче заголовку */
+}
+
+.buy .info p {
+  font-size: 16px;
+  margin: 0; /* Вилучено типовий відступ для абзаців */
+}
+
+.buy .info p.price {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Додано відступ нижче ціни */
+}
+
+.buy form {
+  width: 100%;
+}
+
+.buy form input,
+.buy form select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #000;
+  margin-bottom: 15px; /* Додано відступ між елементами форми */
+}
+
+.buy form button {
+  width: 100%;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 24px
+}
+
+/* Футер */
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px; /* Додано відступ між іконками соціальних мереж */
+}
+
+

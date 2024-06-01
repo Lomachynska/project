@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Сайт з продажу квитків на поїзд</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="https://rawgit.com/googlei18n/libphonenumber/master/dist/libphonenumber.js"></script> 
+  <script src="menuItems.js"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="main-nav">
+        <a href="#">
+          <img src="images/logo.png" alt="Логотип компанії" class="logo">
+        </a>
+        <a href="#" data-href="page-with-schedule.html">АФІША</a>
+        <a href="page-with-schedule.html">РОЗКЛАД</a>
+        <a href="#" data-href="page-with-schedule.html">ПРО НАС</a>
+        <a href="#">
+          <i class="fas fa-phone"></i>
+          <span class="phone-number">063-111-3-777</span>
+        </a>        
+        <a href="#">
+          <i class="fab fa-facebook"></i>
+        <script>
+          const facebookIcon = document.querySelector(".fab.fa-facebook");
+          facebookIcon.addEventListener("click", function() {
+          window.location.href = "https://www.facebook.com";
+        });
+        </script>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        <script>
+          const twitterIcon = document.querySelector(".fab.fa-twitter");
+
+          twitterIcon.addEventListener("click", function() {
+          window.location.href = "https://www.twitter.com";
+        });
+        </script>
+
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        <script>
+          const instagramIcon = document.querySelector(".fab.fa-instagram");
+          instagramIcon.addEventListener("click", function() {
+          window.location.href = "https://www.instagram.com";
+        });
+        </script>
+
+        </a>
+      </nav>
+    </div>
+  </header>
+  
+  
+  <main class="container">
+
+    <section class="about" style="margin-top: 60px;">
+      <h1 style="font-size: 28px; text-align: center; font-weight: bold; color: #333;">Про нас</h1>
+      <div style="position: relative;">
+        <p style="font-size: 20px; text-align: justify; font-weight: bold; color: #333;">Ми - компанія, яка займається продажем квитків на поїзд.</p>
+        <p style="font-size: 20px; text-align: justify; font-weight: bold; color: #724922;">Ми пропонуємо широкий вибір рейсів по всій Україні та за кордон.</p>
+        <p style="font-size: 20px; text-align: justify; font-weight: bold; color: #724922;">Наша мета - зробити подорожі комфортними та доступними для всіх.</p>
+        <img src="images/about.jpg" alt="Фото компанії" style="width: 100%; height: auto; border-radius: 4px;">
+      </div>
+    </section>                 
+
+    <section class="schedule">
+      <h1 style="text-align: center;">АФІША</h1>
+
+      <ul class="tickets" style="display: flex; justify-content: center;">
+        <li class="ticket economy">
+          <a href="#">
+            <img src="images/train.jpg" alt="Фото поїзда" class="ticket-image">
+            <div class="ticket-details">
+              <h2>Київ - Львів</h2>
+              <p>10:00 - 20:00</p>
+              <p class="price">1000 грн</p>
+            </div>
+          </a>
+        </li>
+        <li class="ticket standard">
+          <a href="#">
+            <img src="images/train3.jpg" alt="Фото поїзда" class="ticket-image">
+            <div class="ticket-details">
+              <h2>Харків - Одеса</h2>
+              <p>12:00 - 22:00</p>
+              <p class="price">1500 грн</p>
+            </div>
+          </a>
+        </li>
+        <li class="ticket business">
+          <a href="#">
+            <img src="images/train3.jpg" alt="Фото поїзда" class="ticket-image">
+            <div class="ticket-details">
+              <h2>Дніпро - Запоріжжя</h2>
+              <p>14:00 - 24:00</p>
+              <p class="price">1200 грн</p>
+            </div>
+          </a>
+        </li>
+        <li class="ticket economy">
+          <a href="#">
+            <img src="images/train.jpg" alt="Фото поїзда" class="ticket-image">
+            <div class="ticket-details">
+              <h2>Кривий Ріг - Ужгород</h2>
+              <p>18:00 - 08:00</p>
+              <p class="price">800 грн</p>
+              <span class="ticket-feature">Спальне місце</span>
+            </div>
+          </a>
+        </li>
+        <li class="ticket standard">
+          <a href="#">
+            <img src="images/train3.jpg" alt="Фото поїзда" class="ticket-image">
+            <div class="ticket-details">
+              <h2>Полтава - Чернівці</h2>
+              <p>09:00 - 19:00</p>
+              <p class="price">1300 грн</p>
+              <span class="ticket-feature">Wi-Fi</span>
+            </div>
+          </a>
+        </li>
+        <li class="ticket business">
+          <a href="#">
+            <img src="images/train3.jpg" alt="Фото поїзда" class="ticket-image">
+            <div class="ticket-details">
+              <h2>Луцьк - Івано-Франківськ</h2>
+              <p>11:00 - 21:00</p>
+              <p class="price">1700 грн</p>
+              <span class="ticket-feature">VIP-зала</span>
+              <span class="ticket-feature">Харчування</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+    
+
+
+    <section class="reviews">
+      <h2 style="text-align: center; margin-bottom: 30px;">Відгуки клієнтів</h2>
+      <ul class="review-list">
+        <li>
+          <img src="images/user-avatar1.jpg" alt="Аватар користувача" class="review-avatar">
+          <p class="review-text">
+            Я дуже задоволений послугами компанії. Квитки були доставлені швидко та без проблем. Я б обов'язково рекомендував цю компанію іншим.
+          </p>
+          <span class="review-author">Іван Іванов</span>
+        </li>
+        <li>
+          <img src="images/user-avatar2.jpg" alt="Аватар користувача" class="review-avatar">
+          <p class="review-text">
+            Я завжди купую квитки на поїзди на цьому сайті. Він дуже зручний і інтуїтивно зрозумілий. Я завжди отримую те, що хочу.
+          </p>
+          <span class="review-author">Ольга Петрівна</span>
+        </li>
+        <li>
+          <img src="images/user-avatar3.jpg" alt="Аватар користувача" class="review-avatar">
+          <p class="review-text">
+            Я вперше купувала квитки на поїзд на цьому сайті, і я була дуже задоволена. Все пройшло швидко та легко. Я обов'язково буду користуватися цим сайтом знову.
+          </p>
+          <span class="review-author">Марія Семенівна</span>
+        </li>
+      </ul>
+    </section>    
+
+
+    <section class="buy" style="text-align: center;">
+      <div class="flex-container">
+        <div class="map">
+          <img src="images/map.jpg" alt="Схема вагона" class="map-image">
+          <div class="instructions" style="text-align: left;">
+            <h2>Інструкція при купівлі квитка на поїзд</h2>
+            <p>Щоб купити квиток на поїзд, виконайте наступні кроки:</p>
+            <ol>
+              <li>Введіть дані про пасажира (Імʼя, Призвіще, елек.пошту та телефон).</li>
+              <li>Виберіть місто відправлення та місто прибуття і час відправлення.</li>
+              <li>Виберіть клас вагона.</li>
+              <li>Оплатіть квиток.</li>
+            </ol>
+            <p>Після оплати квитки будуть надіслані вам на електронну пошту.</p>
+          </div>
+        </div>        
+
+        <h1 style="margin-bottom: 20px;">Оформити купівлю квитка на поїзд</h1>
+        <form action="#" id="ticket-form">
+          <input type="text" placeholder="Ім'я" required>
+          <input type="text" placeholder="Прізвище" required>
+          <input type="email" placeholder="Електронна пошта" required>
+          <input type="tel" placeholder="Телефон" id="phone-input" required>
+        
+          <label for="departure-city">Місто відправлення:</label>
+          <select id="departure-city" name="departure-city" oninput="filterCities(this, 'departure')">
+            </select>
+        
+          <label for="arrival-city">Місто прибуття:</label>
+          <select id="arrival-city" name="arrival-city" oninput="filterCities(this, 'arrival')">
+            </select>
+        
+          <label for="class">Клас:</label>
+          <select id="class" name="class">
+            <option value="economy">Економ</option>
+            <option value="standard">Стандарт</option>
+            <option value="business">Бізнес</option>
+          </select>
+        
+          <label for="time">Час відправлення:</label>
+          <select id="time" name="time">
+            <option value="09:00">09:00</option>
+            <option value="12:00">12:00</option>
+            <option value="15:00">15:00</option>
+            <option value="18:00">18:00</option>
+            <option value="21:00">21:00</option>
+          </select>
+        
+          <label for="payment">Спосіб оплати:</label>
+          <select id="payment" name="payment">
+            <option value="credit_card">Кредитна/дебетова картка</option>
+            <option value="google_pay">Google Pay/Apple Pay</option>
+          </select>
+          <button type="button" onclick="buyTicket()">Купити</button> 
+           
+        </form>
+
+          
+          <script>
+            function validatePhoneAndBuy() {
+              const phoneInput = document.getElementById('phone-input');
+              const phoneNumber = phoneInput.value;
+            
+              // Використати функції бібліотеки для валідації
+              const phoneUtil = libphonenumber.PhoneNumberUtil.getInstance();
+              try {
+                const parsedPhoneNumber = phoneUtil.parseAndKeepRawInput(phoneNumber, 'UA'); // UA - код регіону для України
+                const isValid = phoneUtil.isValidNumber(parsedPhoneNumber);
+            
+                if (isValid) {
+                  // Телефонний номер є дійсним, виконуйте додаткові дії або відправляйте форму
+                  buyTicket();
+                } else {
+                  // Телефонний номер недійсний, виведіть повідомлення про помилку або виконайте інші дії
+                  alert('Недійсний номер телефону. Введіть коректний номер.');
+                }
+              } catch (e) {
+                console.error('Помилка при валідації телефонного номеру:', e);
+                alert('Сталася помилка при валідації телефонного номеру.');
+              }
+            }
+            
+            // Додати інші функції, такі як buyTicket() і filterCities()
+            </script>
+
+          <script>
+            function buyTicket() {
+              // Отримати значення з полів форми
+              const name = document.querySelector('input[placeholder="Ім\'я"]').value;
+              const surname = document.querySelector('input[placeholder="Прізвище"]').value;
+              const email = document.querySelector('input[placeholder="Електронна пошта"]').value;
+              const departureCity = document.querySelector('select[name="departure-city"]').value;
+              const arrivalCity = document.querySelector('select[name="arrival-city"]').value;
+              const selectedClass = document.querySelector('select[name="class"]').value;
+              const selectedPayment = document.querySelector('select[name="payment"]').value;
+          
+              // Виконати дії зі збраними даними, наприклад, відправите їх на сервер або ввести в консоль
+              console.log('Ім\'я:', name);
+              console.log('Прізвище:', surname);
+              console.log('Електронна пошта:', email);
+              console.log('Місто відправлення:', departureCity);
+              console.log('Місто прибуття:', arrivalCity);
+              console.log('Клас:', selectedClass);
+              console.log('Спосіб оплати:', selectedPayment);
+          
+              // Додати для обробки даних форми, наприклад, відправлення на сервер або виведення повідомлення
+              alert('Дякуємо за покупку!');
+          
+              // Очистіть форму
+              document.getElementById('ticket-form').reset();
+            }
+          </script>
+          
+          <script>
+            function filterCities(input, type) {
+              const select = document.getElementById(type === 'departure' ? 'departure-city' : 'arrival-city');
+              const filter = input.value.toUpperCase();
+              const options = select.getElementsByTagName('option');
+          
+              for (let i = 0; i < options.length; i++) {
+                const txtValue = options[i].text;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  options[i].style.display = '';
+                } else {
+                  options[i].style.display = 'none';
+                }
+              }
+            }
+          </script>
+  
+          
+          <script>
+            const csvFilePath = 'Cities.csv';
+            const departureCitySelect = document.getElementById('departure-city');
+            const arrivalCitySelect = document.getElementById('arrival-city');
+          
+            Papa.parse(csvFilePath, {
+              download: true,
+              header: true,
+              complete: function (results) {
+                const cities = results.data;
+          
+                cities.forEach(city => {
+                  const option = document.createElement('option');
+                  option.value = city.object_code;
+                  option.text = city.object_name;
+          
+                  departureCitySelect.add(option.cloneNode(true));
+                  arrivalCitySelect.add(option);
+                });
+              }
+            });
+          </script>
+
+          <script> 
+            document.addEventListener("DOMContentLoaded", function() {
+              const navLinks = document.querySelectorAll('.main-nav a');
+            
+              navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                  // Видаляємо клас "active" з усіх пунктів меню
+                  navLinks.forEach(navLink => navLink.classList.remove('active'));
+            
+                  // Додаємо клас "active" до натисканого пункту меню
+                  link.classList.add('active');
+                });
+              });
+            });            
+          </script>
+
+          <script>
+            function callPhoneNumber(phoneNumber) {
+              // Ваш код для виклику номера телефону тут
+              alert('Викликаємо номер ' + phoneNumber);
+            }
+          </script>
+          
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Всі права захищені &copy; 2024</p>
+      <p>
+        <a href="#">
+          <span class="phone-link">
+            <i class="fas fa-phone"></i>
+            063-111-3-777
+          </span>
+        </a>        
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

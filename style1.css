@@ -1,0 +1,21 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.time {
+  width: 100px;
+}
+
+.station-departure {
+  width: 200px;
+}
+
+.station-arrival {
+  width: 200px;
+}
